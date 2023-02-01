@@ -8,23 +8,23 @@ const nextConfig = {
         patterns: [
           {
             from: 'node_modules/pyodide/pyodide.asm.data',
-            to: 'public/pyodide-data/',
+            to: 'static/pyodide-data/',
           },
           {
             from: 'node_modules/pyodide/repodata.json',
-            to: 'public/pyodide-data/',
+            to: 'static/pyodide-data/',
           },
           {
             from: 'node_modules/pyodide/pyodide.asm.wasm',
-            to: 'public/pyodide-data/',
+            to: 'static/pyodide-data/',
           },
           {
             from: 'node_modules/pyodide/pyodide_py.tar',
-            to: 'public/pyodide-data/',
+            to: 'static/pyodide-data/',
           },
           {
             from: 'node_modules/pyodide/pyodide.asm.js',
-            to: 'public/pyodide-data/',
+            to: 'static/pyodide-data/',
           },
         ],
       }),
