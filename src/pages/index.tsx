@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 if (typeof window !== "undefined") {
   pyodideModule
     .loadPyodide({
-      indexURL: "/pyodide-data",
+      indexURL: "/_next/static/pyodide-data",
     })
     .then((pyodide) => {
       (window as any).pyodide = pyodide;
