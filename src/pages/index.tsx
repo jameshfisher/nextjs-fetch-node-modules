@@ -2,8 +2,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import * as pyodideModule from "pyodide"
 
 const inter = Inter({ subsets: ['latin'] })
+
+if (typeof window !== "undefined") {
+  pyodideModule
+    .loadPyodide({
+      indexURL: "/pyodide-data",
+    })
+    .then((pyodide) => {
+      (window as any).pyodide = pyodide;
+    });
+}
 
 export default function Home() {
   return (
